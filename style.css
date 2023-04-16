@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    /* text ko centre me karane ke liye  */
+    text-align: center;
+     margin-top: 10px;
+     margin-bottom: 5px;
+}
+#wrapper{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    max-width: 1200px;
+    /* left side aur right side se iss tarah se margin lagaya jata hai ki content centre per aa jaye  */
+    margin: 0px auto;
+    padding: 20px;
+   
+    
+
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  
+
+}
+.card{
+width: 32%;
+
+
+
+/* caption ko overlap karana hai  */
+position: relative;
+border-radius: 15px;
+overflow: hidden;
+margin-bottom: 15px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px);
+    transition: 0.5s;
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    /* card ki hieght  width ka  */
+    width: 100%;
+    width: 20%;
+    font-size: 600;
+    color: black;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.5s;
+
+}
+.card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.03);
+  }  
